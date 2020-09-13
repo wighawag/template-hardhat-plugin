@@ -1,18 +1,25 @@
 language: node_js
 
 node_js:
-  - "10"
-  - "11"
-  - "12"
+  - '10'
+  - '11'
+  - '12'
+
+cache:
+  npm: false
+  directories:
+    - '~/.pnpm-store'
+
+before_install:
+  - curl -L https://unpkg.com/@pnpm/self-installer | node
+  - pnpm config set store-dir ~/.pnpm-store
 
 install:
-  - npm ci
+  - pnpm install
 
 script:
   - npm run test
   - npm run lint
-
-cache: npm
 
 branches:
   only:
