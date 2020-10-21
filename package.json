@@ -13,14 +13,6 @@
     "hardhat",
     "hardhat-plugin"
   ],
-  "scripts": {
-    "prepare": "node ./.setup.js",
-    "lint:fix": "eslint --fix .",
-    "lint": "eslint .",
-    "test": "mocha --exit",
-    "build": "tsc",
-    "watch": "tsc -w"
-  },
   "files": [
     "dist/src/",
     "src/",
@@ -48,5 +40,13 @@
   },
   "peerDependencies": {
     "hardhat": "^2.0.0-rc.0"
+  },
+  "scripts": {
+    "prepare": "node ./.setup.js",
+    "lint:fix": "eslint --fix .",
+    "lint": "eslint .",
+    "test": "mocha --exit",
+    "build": "tsc",
+    "watch": "tsc -w"
   }
 }
