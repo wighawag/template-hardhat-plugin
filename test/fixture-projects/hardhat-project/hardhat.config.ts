@@ -1,5 +1,5 @@
 // We load the plugin here.
-require('../../../src/index');
+import '../../../src/index';
 
 import {HardhatUserConfig} from 'hardhat/types';
 
