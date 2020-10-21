@@ -1,8 +1,8 @@
 {
-  "name": "wighawag-buidler-ts-plugin-boilerplate",
+  "name": "wighawag-hardhat-plugin-template",
   "version": "0.0.1",
-  "description": "Buidler TypeScript plugin boilerplate",
-  "repository": "github:wighawag/wighawag-buidler-ts-plugin-boilerplate",
+  "description": "Hardhat TypeScript plugin boilerplate",
+  "repository": "github:wighawag/hardhat-plugin-template",
   "author": "Ronan Sandford",
   "license": "MIT",
   "main": "dist/src/index.js",
@@ -10,8 +10,8 @@
   "keywords": [
     "ethereum",
     "smart-contracts",
-    "buidler",
-    "buidler-plugin"
+    "hardhat",
+    "hardhat-plugin"
   ],
   "scripts": {
     "prepare": "node ./.setup.js",
@@ -28,7 +28,7 @@
     "README.md"
   ],
   "devDependencies": {
-    "@nomiclabs/buidler": "^1.4.5",
+    "hardhat": "^2.0.0-rc.0",
     "@types/chai": "^4.1.7",
     "@types/fs-extra": "^5.0.4",
     "@types/mocha": "^5.2.5",
@@ -47,6 +47,6 @@
     "prettier": "^2.0.5"
   },
   "peerDependencies": {
-    "@nomiclabs/buidler": "^1.0.1"
+    "hardhat": "^2.0.0-rc.0"
   }
 }

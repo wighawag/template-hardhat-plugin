@@ -1,14 +1,12 @@
-import {extendEnvironment} from '@nomiclabs/buidler/config';
-import {lazyObject} from '@nomiclabs/buidler/plugins';
+import {extendEnvironment} from 'hardhat/config';
+import {lazyObject} from 'hardhat/plugins';
+import './type-extensions';
 
-import {ExampleBuidlerRuntimeEnvironmentField} from './ExampleBuidlerRuntimeEnvironmentField';
+import {ExampleHardhatRuntimeEnvironmentField} from './ExampleHardhatRuntimeEnvironmentField';
 
-// Everything in a plugin must happen inside an exported function
-export default function (): void {
-  extendEnvironment((env) => {
-    // We add a field to the Buidler Runtime Environment here.
-    // We use lazyObject to avoid initializing things until they are actually
-    // needed.
-    env.example = lazyObject(() => new ExampleBuidlerRuntimeEnvironmentField());
-  });
-}
+extendEnvironment((env) => {
+  // We add a field to the Hardhat Runtime Environment here.
+  // We use lazyObject to avoid initializing things until they are actually
+  // needed.
+  env.example = lazyObject(() => new ExampleHardhatRuntimeEnvironmentField());
+});
